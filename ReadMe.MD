@@ -1,0 +1,1 @@
+>> Unzip the `wplms.zip` to get the main WPLMS theme folder.
