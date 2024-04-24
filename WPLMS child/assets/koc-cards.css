@@ -1,0 +1,319 @@
+.r4h_course-card {
+    position: relative;
+    border-radius: 7px;
+}
+
+.r4h-courses__container p {
+    margin: 0;
+}
+
+.r4h_course-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    background-color: #fff;
+    border: 2px solid #e7e7e7;
+    border-radius: 7px;
+    margin: auto;
+}
+
+.r4h_course-card .r4h-thumb {
+    position: relative;
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    max-height: 255px;
+}
+
+.r4h_course-card .r4h-thumb img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.r4h_course-card .r4h-thumb::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #22281e;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.3s ease;
+    margin: auto;
+}
+
+.r4h_course-card .r4h-course-details {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(0.625rem, 0.5694rem + 0.3067vw, 0.9375rem) clamp(0.625rem, 0.5138rem + 0.6135vw, 1.25rem);
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+
+.r4h_course-card .r4h-course-details>p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-family: "Manrope", sans-serif;
+}
+
+.r4h_course-card .r4h-course-details>p i {
+    font-size: 14px;
+    color: #00c1eb;
+    margin-right: 8px;
+}
+
+.r4h_course-card .r4h-course__contents {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0 25px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-details-inner {
+    position: static;
+    transform: none;
+    padding: 0px;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-details-inner .r4h-metadata-holder h5 {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1.5rem, 1.4333rem + 0.3681vw, 1.875rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-details-inner .r4h-metadata-holder h5 a {
+    color: #333;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-details-inner .r4h-metadata-holder .r4h-description {
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: "Manrope", sans-serif;
+    margin: 0 0 20px;
+    color: #394630;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    border: 2px solid #e7e7e7;
+    border-width: 2px 0;
+    border-bottom-color: transparent;
+    padding: 20px 0;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details {
+    grid-column: 1/2;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details .woocommerce-price-suffix {
+    display: none;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details strong {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "Manrope", sans-serif;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details strong del {
+    font-size: clamp(1.25rem, 1.2055rem + 0.2454vw, 1.5rem);
+    color: #00c1eb;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details strong ins {
+    text-decoration: none;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details strong ins span {
+    color: #00c1eb;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container,
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-cart-details {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container .r4h-ratings {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container .r4h-ratings .rating__background {
+    fill: #bfc3ca;
+    stroke: red;
+    stroke-width: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container .r4h-ratings .rating__value {
+    fill: #ffbe00;
+    height: 100%;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-ratings-container .r4h-overall-ratings {
+    display: inline-block;
+    line-height: 1.7;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-cart-details {
+    text-align: end;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-cart-details a {
+    margin: 0;
+    border: none;
+    background-color: #0e1c41;
+    color: #fff !important;
+    padding: clamp(0.5625rem, 0.5048rem + 0.2564vw, 0.8125rem) clamp(1.25rem, 1.0481rem + 0.8974vw, 2.125rem);
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 7px;
+    margin-left: -50px;
+    transition: all 0.3s linear 0s;
+}
+
+.r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-cart-details a:hover {
+    background-color: #00c1eb;
+}
+
+.r4h_course-card:hover .r4h-thumb::before {
+    opacity: 0.3;
+}
+
+.r4h_course-card:hover .r4h-bottom-data .r4h-ratings-container {
+    transform: translateX(20px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.r4h_course-card:hover .r4h-bottom-data .r4h-coursedetail-cart-details {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*# Courses Card Css End  */
+.r4h-courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+@media (max-width: 940px) {
+    .r4h-courses__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .r4h-courses__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Browse Our Course Catalog Section CSS Start */
+.r4h-courses__container .r4h_course-card .r4h-course__contents .r4h-details-inner .r4h-metadata-holder h5>a {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1.5rem, 1.4333rem + 0.3681vw, 1.875rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.r4h-courses__container .r4h_course-card .r4h-course__contents .r4h-details-inner .r4h-metadata-holder>p {
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: "Manrope", sans-serif;
+    margin: 0 0 10px;
+    color: #394630;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.r4h-courses__container .r4h_course-card .r4h-course__contents .r4h-bottom-data .r4h-coursedetail-price-details .r4h-course__price span {
+    color: #00c1eb;
+    font-size: 24px;
+    line-height: 1.2;
+    font-family: "Manrope", sans-serif;
+}
+
+/* Browse Our Course Catalog Section CSS END */
