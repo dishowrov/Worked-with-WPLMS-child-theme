@@ -7,6 +7,7 @@ function dis_courses_shortcode($atts)
     $atts = shortcode_atts(
         array(
             'id' => '',
+            'category'  => '',
         ),
         $atts
     );
@@ -30,6 +31,28 @@ function dis_courses_shortcode($atts)
             'post__in' => $course_id,
             'post_status' => 'published',
         );
+    }
+
+    if (!empty($atts['category'])) {
+        $terms = get_terms(array(
+            'taxonomy' => 'course-cat',
+            'slug' => $atts['category']
+        ));
+
+        if (!empty($terms)) {
+            $term_id = $terms[0]->terms_id;
+            $args = array(
+                'post_type' => 'course',
+                'posts_per_page' => -1,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'course-cat',
+                        'field' => 'slug',
+                        'terms' => $atts['category']
+                    )
+                ),
+            );
+        }
     }
 
     $fetch = new WP_Query($args);
@@ -89,6 +112,25 @@ function dis_courses_shortcode($atts)
                     <a href="<?php echo esc_attr($course_link); ?>" class="dis-course-img">
                         <img src="<?php echo $course_img ?>" alt="Course Thumbnail">
                     </a>
+
+                    <p>
+                        <?php echo get_the_date('Y d M');
+                        ?>
+                        <br>
+                        <?php
+                        $post_date = get_the_date('D M j');
+                        echo $post_date;
+                        ?>
+                        <br>
+                        <?php
+                        $post_date = get_the_date('l F j, Y');
+                        echo $post_date;
+                        ?>
+                        <br>
+                        <?php
+                        the_date();
+                        ?>
+                    </p>
 
                     <h6 class="dis-course-category">
                         <a href="<?php echo esc_url(get_term_link($terms[0])); ?>">

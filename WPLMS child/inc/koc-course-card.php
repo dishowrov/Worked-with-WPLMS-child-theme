@@ -128,13 +128,13 @@ function koc_card_shortcode($atts)
 
                                 </p>
                             </div>
-                            <!-- <div class="r4h-coursedetail-cart-details">
+                            <div class="r4h-coursedetail-cart-details">
                                 <?php
                                 $product_ID = get_post_meta($course_ID, 'vibe_product', true);
                                 $add_to_cart_url = wc_get_cart_url() . '?add-to-cart=' . $product_ID;
                                 ?>
                                 <a href="<?php echo $add_to_cart_url ?>" class="r4h-button">Add to Cart</a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
